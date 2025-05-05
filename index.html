@@ -45,6 +45,11 @@
     .subject-button:hover {
       background: #388e3c;
     }
+
+    .subject-button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
   </style>
 </head>
 <body>
@@ -52,8 +57,8 @@
 <div class="container">
   <h1>🎓 Chọn môn để làm bài thi</h1>
   <button class="subject-button" onclick="startExam('sinh')">🧮 Sinh</button>
-  <button class="subject-button" onclick="startExam('cnnn')">📖 Công Nghệ Nông Nghiệp</button>
-  <button class="subject-button" onclick="startExam('anh')">🌐 Tiếng Anh</button>
+  <button class="subject-button" onclick="startExam('cnnn')" disabled>📖 Công Nghệ Nông Nghiệp</button>
+  <button class="subject-button" onclick="startExam('anh')" disabled>🌐 Tiếng Anh</button>
 </div>
 
 <script>

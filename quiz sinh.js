@@ -17,6 +17,16 @@ function generateQuiz() {
 
     // Thêm số thứ tự vào câu hỏi
     qDiv.innerHTML = `<h3>Câu ${index + 1}: ${q.text}</h3>`;
+    // Sau dòng: qDiv.innerHTML = ...
+if (q.image) {
+  const img = document.createElement('img');
+  img.src = q.image;
+  img.alt = "Hình minh họa";
+  img.style.maxWidth = "100%";
+  img.style.margin = "10px 0";
+  qDiv.appendChild(img);
+}
+
 
     const optionsDiv = document.createElement('div');
     optionsDiv.className = 'options';
