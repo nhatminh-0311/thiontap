@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chọn Môn Thi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(120deg, #f6f9fc, #dceeff);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 300px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .subject-button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 10px 0;
+      font-size: 16px;
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .subject-button:hover {
+      background: #388e3c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🎓 Chọn môn để làm bài thi</h1>
+  <button class="subject-button" onclick="startExam('sinh')">🧮 Sinh</button>
+  <button class="subject-button" onclick="startExam('cnnn')">📖 Công Nghệ Nông Nghiệp</button>
+  <button class="subject-button" onclick="startExam('anh')">🌐 Tiếng Anh</button>
+</div>
+
+<script>
+  function startExam(subject) {
+    localStorage.setItem('subject', subject);
+    window.location.href = `trangtruocthi ${subject}.html`;
+  }
+</script>
+
+</body>
+</html>
